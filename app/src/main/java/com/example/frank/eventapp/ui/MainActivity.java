@@ -43,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<Response> call, retrofit2.Response<Response> response) {
                         Response res = response.body();
                         Toast.makeText(MainActivity.this,res.toString(),Toast.LENGTH_SHORT).show();
+                        binding.inputName.getEditText().setText("");
+                        binding.inputLastName.getEditText().setText("");
+                        binding.inputUsername.getEditText().setText("");
+                        binding.inputPassword.getEditText().setText("");
+
                     }
 
                     @Override
